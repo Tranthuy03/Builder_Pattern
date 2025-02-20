@@ -5,20 +5,20 @@ class PermanentContract implements Contract {
     private double rentAmount;
 
     @Override
-    public void buildContractID() { this.contractID = "PERM123"; }
+    public void buildContractID(String contractID) { this.contractID = contractID; }
     
     @Override
-    public void buildPropertyID() { this.propertyID = "PROP001"; }
+    public void buildPropertyID(String propertyID) { this.propertyID = propertyID; }
     
     @Override
-    public void buildTenantID() { this.tenantID = "TEN001"; }
+    public void buildTenantID(String tenantID) { this.tenantID = tenantID; }
     
     @Override
-    public void buildRentAmount() { this.rentAmount = 5000.0; }
+    public void buildRentAmount(double rentAmount) { this.rentAmount = rentAmount; }
 
     @Override
     public Contract signContract() {
-        System.out.println("Permanent Contract Signed!");
+        System.out.println("Permanent Contract Signed: " + contractID);
         return this;
     }
 }
