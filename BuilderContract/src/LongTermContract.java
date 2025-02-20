@@ -5,20 +5,20 @@ class LongTermContract implements Contract {
     private double rentAmount;
 
     @Override
-    public void buildContractID() { this.contractID = "LONG456"; }
+    public void buildContractID(String contractID) { this.contractID = contractID; }
 
     @Override
-    public void buildPropertyID() { this.propertyID = "PROP002"; }
+    public void buildPropertyID(String propertyID) { this.propertyID = propertyID; }
 
     @Override
-    public void buildTenantID() { this.tenantID = "TEN002"; }
+    public void buildTenantID(String tenantID) { this.tenantID = tenantID; }
 
     @Override
-    public void buildRentAmount() { this.rentAmount = 7000.0; }
+    public void buildRentAmount(double rentAmount) { this.rentAmount = rentAmount; }
 
     @Override
     public Contract signContract() {
-        System.out.println("Long-Term Contract Signed!");
+        System.out.println("Long-Term Contract Signed: " + contractID);
         return this;
     }
 }
