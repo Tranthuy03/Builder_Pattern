@@ -5,20 +5,20 @@ class ShortTermContract implements Contract {
     private double rentAmount;
 
     @Override
-    public void buildContractID() { this.contractID = "SHORT789"; }
+    public void buildContractID(String contractID) { this.contractID = contractID; }
 
     @Override
-    public void buildPropertyID() { this.propertyID = "PROP003"; }
+    public void buildPropertyID(String propertyID) { this.propertyID = propertyID; }
 
     @Override
-    public void buildTenantID() { this.tenantID = "TEN003"; }
+    public void buildTenantID(String tenantID) { this.tenantID = tenantID; }
 
     @Override
-    public void buildRentAmount() { this.rentAmount = 3000.0; }
+    public void buildRentAmount(double rentAmount) { this.rentAmount = rentAmount; }
 
     @Override
     public Contract signContract() {
-        System.out.println("Short-Term Contract Signed!");
+        System.out.println("Short-Term Contract Signed: " + contractID);
         return this;
     }
 }
